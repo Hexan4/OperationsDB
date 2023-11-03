@@ -11,4 +11,14 @@ public class manageAcc {
             System.out.println("This username already exist.");
         }
     }
+    public boolean authorisation(String login, String password){
+        accounts konto = new accounts(login, password);
+        if (konto.checkPassword(password)){
+            System.out.println("You are log in.");
+            return true;
+        }else {
+            System.out.println("incorrect password");
+            return false;
+        }
+    }
 }
