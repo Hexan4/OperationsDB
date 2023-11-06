@@ -6,7 +6,7 @@ public class manageAcc {
     public void createAcc(String login, String password){
         if (!(account.containsKey(login))){
             account.put(login, new accounts(login,password));
-            System.out.println("Successful!");
+            System.out.println("Successful! - Welcome " + login);
         }else {
             System.out.println("This username already exist.");
         }

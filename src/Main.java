@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         manageAcc manager = new manageAcc();
-        System.out.println("What do you want? - enter ''create'' to create accout or ''sing in'' to sing in");
+        DBManager base = new DBManager();
+        System.out.println("What do you want? - enter ''create'' to create account or ''sing in'' to sing in");
         while (true){
             String decision = scanner.nextLine();
             if (decision.equals("create")){
@@ -23,11 +24,20 @@ public class Main {
                 manager.authorisation(login,password);
                 break;
             }else {
-                System.out.println("Try again enter ''create'' to create accout or ''sing in'' to sing in :)");
+                System.out.println("Try again enter ''create'' to create account or ''sing in'' to sing in :)");
             }
         }
         System.out.println("What do you want to do?");
-        System.out.println("enter 1 - Select Customers, enter 2 - Select one Customer");
+        System.out.println("enter 1 for water usage, enter 2 for modify usage, enter 3 for update usage, enter 4 for delete usage");
         String select = scanner.nextLine();
+        if (select.equals("1")){
+            base.main();
+        } else if (select.equals("2")) {
+
+        } else if (select.equals("3")) {
+
+        } else if (select.equals("4")) {
+
+        }
     }
 }
