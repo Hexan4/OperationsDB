@@ -28,16 +28,27 @@ public class Main {
             }
         }
         System.out.println("What do you want to do?");
-        System.out.println("enter 1 for water usage, enter 2 for modify usage, enter 3 for update usage, enter 4 for delete usage");
+        System.out.println("enter 1 for see rows, enter 2 for modify row, enter 3 for delete row, enter 4 for create new row");
         String select = scanner.nextLine();
         if (select.equals("1")){
             base.main();
         } else if (select.equals("2")) {
-
+            System.out.println("To modify set new values as 'column1 = value1'");
+            String setValue = scanner.nextLine();
+            System.out.println("And set condition");
+            String condition = scanner.nextLine();
+            update modify = new update(condition,setValue);
+            modify.updateDatabase();
         } else if (select.equals("3")) {
-
+            System.out.println("To delete row enter id");
+            int deleteRow = scanner.nextInt();
         } else if (select.equals("4")) {
-
+            System.out.println("enter imie");
+            String name = scanner.nextLine();
+            System.out.println("enter nazwisko");
+            String surname = scanner.nextLine();
+            System.out.println("enter aktywny");
+            int active = scanner.nextInt();
         }
     }
 }
