@@ -40,8 +40,10 @@ public class Main {
             update modify = new update(condition,setValue);
             modify.updateDatabase();
         } else if (select.equals("3")) {
-            System.out.println("To delete row enter id");
-            int deleteRow = scanner.nextInt();
+            System.out.println("To delete row enter statement for example 'klientID = 1'");
+            String deleteRow = scanner.nextLine();
+            delete delete = new delete(deleteRow);
+            delete.setDeleteRow();
         } else if (select.equals("4")) {
             System.out.println("enter imie");
             String name = scanner.nextLine();
@@ -49,6 +51,8 @@ public class Main {
             String surname = scanner.nextLine();
             System.out.println("enter aktywny");
             int active = scanner.nextInt();
+            create instert = new create(name,surname,active);
+            instert.insterInto();
         }
     }
 }
